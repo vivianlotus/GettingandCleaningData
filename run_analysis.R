@@ -34,14 +34,18 @@ colnames(finalData) <- c("subject", "activity", featureName[featureIndex])
 
 #load activity data into R
 activityName <- read.table("./data/UCI HAR Dataset/activity_labels.txt")
+finalData$activity <- factor(finalData$activity, levels = activityName[,1], labels = activityName[,2])
+
+## No.4
 
 #label the data set with descriptive variable names
-finalData$activity <- factor(finalData$activity, levels = activityName[,1], labels = activityName[,2])
 names(finalData) <- gsub("\\()", "", names(finalData))
 names(finalData) <- gsub("^t", "time", names(finalData))
 names(finalData) <- gsub("^f", "frequence", names(finalData))
 names(finalData) <- gsub("-mean", "Mean", names(finalData))
 names(finalData) <- gsub("-std", "Std", names(finalData))
+
+## No.5 
 
 #create tidy data MeanData
 library(dplyr)
