@@ -1,12 +1,14 @@
 # GettingandCleaningData
 
 
-Input
+Data Input
+---------
 
-Data set: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
 Analysis Script
+---------
 
 `run_analysis.R`: this script takes the input data, and creates the output file 
 
@@ -14,6 +16,7 @@ The script first downloads and unzips the dataset from the above url. The script
 
 
 Output
+---------
 
 Tidy dataset: `MeanData.txt`
 
